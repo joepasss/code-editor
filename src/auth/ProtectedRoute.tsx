@@ -1,4 +1,4 @@
-import React, { ComponentType } from "react";
+import { ComponentType } from "react";
 import { Route } from "react-router-dom";
 import { withAuthenticationRequired } from "@auth0/auth0-react";
 import Loading from "src/components/common/loading/Loading";
