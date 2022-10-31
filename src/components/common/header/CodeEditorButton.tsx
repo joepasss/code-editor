@@ -7,7 +7,7 @@ const CodeEditorStyledButton = styled(Button)(({ theme }) => ({
   color: theme.commonColors.white,
 }));
 
-const SignOutButton = () => {
+const CodeEditorButton = () => {
   const history = useHistory();
 
   const onClick = () => {
@@ -17,4 +17,4 @@ const SignOutButton = () => {
   return <CodeEditorStyledButton onClick={onClick}>Code Editor</CodeEditorStyledButton>;
 };
 
-export default SignOutButton;
+export default CodeEditorButton;
