@@ -1,7 +1,7 @@
 import { ComponentType } from "react";
 import { Route } from "react-router-dom";
 import { withAuthenticationRequired } from "@auth0/auth0-react";
-import Loading from "src/components/common/loading/Loading";
+import Loading from "components/common/loading/Loading";
 
 type ProtectedRouteProps = {
   component: ComponentType;

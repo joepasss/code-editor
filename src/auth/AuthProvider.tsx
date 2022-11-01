@@ -1,7 +1,7 @@
 import { PropsWithChildren } from "react";
 import { AppState, Auth0Provider } from "@auth0/auth0-react";
 import { useHistory } from "react-router-dom";
-import config from "src/config";
+import config from "config";
 
 const AuthProvider = (props: PropsWithChildren<{}>) => {
   const history = useHistory();
