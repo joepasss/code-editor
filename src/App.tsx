@@ -4,15 +4,15 @@ import CustomThemeProvider from "src/theme/CustomThemeProvider";
 import Routes from "./routes/Routes";
 
 function App() {
-  return (
-    <Router>
-      <AuthProvider>
-        <CustomThemeProvider>
-          <Routes />
-        </CustomThemeProvider>
-      </AuthProvider>
-    </Router>
-  );
+	return (
+		<Router>
+			<AuthProvider>
+				<CustomThemeProvider>
+					<Routes />
+				</CustomThemeProvider>
+			</AuthProvider>
+		</Router>
+	);
 }
 
 export default App;
