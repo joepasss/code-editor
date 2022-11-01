@@ -1,4 +1,4 @@
-import Layout from "src/layout/Layout";
+import Layout from "layout/Layout";
 import { styled } from "@mui/material";
 
 const HomeContainer = styled("div")(({ theme }) => ({

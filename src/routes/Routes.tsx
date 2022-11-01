@@ -1,8 +1,8 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import paths from "./paths";
+import paths from "routes/paths";
 
-const Home = React.lazy(() => import("src/pages/home/Home"));
+const Home = React.lazy(() => import("pages/home/Home"));
 
 const Routes = () => {
 	return (
