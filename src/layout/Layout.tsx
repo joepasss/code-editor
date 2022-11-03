@@ -12,7 +12,7 @@ const Page = styled("div")({
 	height: "100%",
 });
 
-const Layout = (props: PropsWithChildren<{}>) => {
+export const Layout = (props: PropsWithChildren<{}>) => {
 	return (
 		<LayoutContainer>
 			<Header />
