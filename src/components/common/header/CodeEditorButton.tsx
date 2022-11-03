@@ -13,7 +13,7 @@ const CodeEditorButton = () => {
     history.push(paths.codeEditor);
   };
 
-  return <CodeEditorStyledButton onClick={onClick}>Sign In</CodeEditorStyledButton>;
+  return <CodeEditorStyledButton onClick={onClick}>CODE</CodeEditorStyledButton>;
 };
 
 export default CodeEditorButton;
