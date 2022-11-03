@@ -1,5 +1,6 @@
 import { Layout } from "layout/Layout";
 import { styled } from "@mui/material";
+import ProgrammingLanguagesList from "components/home/programming-languages-list/ProgrammingLanguagesList";
 
 const HomeContainer = styled("div")(({ theme }) => ({
 	display: "flex",
@@ -21,6 +22,7 @@ const Home = () => {
 		<Layout>
 			<HomeContainer>
 				<WelcomeMessage>Welcome to the Code editor app!</WelcomeMessage>
+				<ProgrammingLanguagesList />
 			</HomeContainer>
 		</Layout>
 	);
