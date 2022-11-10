@@ -4,45 +4,48 @@ import { styled } from "@mui/material/styles";
 import { Link } from "react-router-dom";
 import paths from "routes/paths";
 import CodeEditorButton from "./CodeEditorButton";
+import DarkModeSwitch from "./DarkModeSwitch";
 import SignInButton from "./SignInButton";
 import SignOutButton from "./SignOutButton";
 
 const StyledLink = styled(Link)(({ theme }) => ({
-	textDecoration: "none",
-	color: theme.commonColors.white,
+  textDecoration: "none",
+  color: theme.commonColors.white,
 }));
 
 const Header = () => {
-	const { isAuthenticated } = useAuth0();
+  const { isAuthenticated } = useAuth0();
 
-	return (
-		<AppBar position="relative">
-			<Toolbar>
-				<Typography variant="h6" sx={{ flex: 1 }}>
-					<StyledLink to={paths.home}>Code Editor App</StyledLink>
-				</Typography>
+  return (
+    <AppBar position="relative">
+      <Toolbar>
+        <Typography variant="h6" sx={{ flex: 1 }}>
+          <StyledLink to={paths.home}>Code Editor App</StyledLink>
+        </Typography>
 
-				{isAuthenticated ? <AuthenticatedButtons /> : <UnathenticatedButtons />}
-			</Toolbar>
-		</AppBar>
-	);
+        <DarkModeSwitch />
+
+        {isAuthenticated ? <AuthenticatedButtons /> : <UnathenticatedButtons />}
+      </Toolbar>
+    </AppBar>
+  );
 };
 
 const UnathenticatedButtons = () => {
-	return (
-		<div>
-			<SignInButton />
-		</div>
-	);
+  return (
+    <div>
+      <SignInButton />
+    </div>
+  );
 };
 
 const AuthenticatedButtons = () => {
-	return (
-		<div>
-			<CodeEditorButton />
-			<SignOutButton />
-		</div>
-	);
+  return (
+    <div>
+      <CodeEditorButton />
+      <SignOutButton />
+    </div>
+  );
 };
 
 export default Header;
