@@ -1,11 +1,11 @@
-import darkModeReducer, { toggleDarkMode } from "./darkMode";
+import { toggleDarkMode, darkModeReducer } from "./darkMode";
 
 describe("dark mode reducer", () => {
-	it("should enable the dark mode it is disabled", () => {
-		expect(darkModeReducer(false, toggleDarkMode)).toEqual(true);
-	});
+  it("should enable the dark mode it is disabled", () => {
+    expect(darkModeReducer(false, toggleDarkMode)).toEqual(true);
+  });
 
-	it("should disabled the dark mode it is enabled", () => {
-		expect(darkModeReducer(true, toggleDarkMode)).toEqual(false);
-	});
+  it("should disabled the dark mode it is enabled", () => {
+    expect(darkModeReducer(true, toggleDarkMode)).toEqual(false);
+  });
 });
