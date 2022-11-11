@@ -1,10 +1,10 @@
 import { PropsWithChildren } from "react";
 import { createTheme, ThemeProvider } from "@mui/material";
 import { commonColors, darkColors, lightColors } from "theme/colors";
+import { useAppSelector } from "store/hooks";
 
 const CustomThemeProvider = (props: PropsWithChildren) => {
-  // @TODO: get theme data from redux
-  const darkMode = false;
+  const darkMode = useAppSelector((state) => state.darkMode);
 
   const theme = createTheme({
     palette: {
